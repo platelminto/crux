@@ -102,7 +102,7 @@ public class ArticleExtractor {
   public ArticleExtractor estimateReadingTime() {
     // TODO: Consider handling badly-punctuated text such as missing spaces after periods.
     long wordCount = document.text().split("\\s+").length;
-    article.estimatedReadingTimeMinutes = (int) Math.ceil(wordCount / AVERAGE_WORDS_PER_MINUTE);
+    article.estimatedReadingTimeMinutes = (int) Math.ceil((double) wordCount / AVERAGE_WORDS_PER_MINUTE);
     return this;
   }
 

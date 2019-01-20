@@ -293,8 +293,8 @@ public class GoldenFilesTest {
   @Test
   public void testNews24() {
     Article article = TestHelper.extractFromTestFile("https://www.news24.com/World/News/watch-indonesia-frees-bali-nine-drug-smuggler-lawrence-from-prison-20181121", "news24.html");
-    // TODO: assertEquals("WATCH: Indonesia frees Bali Nine drug smuggler Lawrence from prison", article.title);
-    // TODO: assertStartsWith("The first member of the \"Bali Nine\" heroin-trafficking gang was released from prison on Wednesday after serving 13 years, in a case that caused a huge diplomatic rift between Indonesia and Australia.", article.document.text());
+    assertEquals("WATCH: Indonesia frees Bali Nine drug smuggler Lawrence from prison", article.title);
+    assertStartsWith("The first member of the \"Bali Nine\" heroin-trafficking gang was released from prison on Wednesday after serving 13 years, in a case that caused a huge diplomatic rift between Indonesia and Australia.", article.document.text());
   }
 
   @Test
